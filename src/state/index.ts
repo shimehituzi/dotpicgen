@@ -1,17 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
-import exampleSlice from 'state/example'
 import colorSlice from 'state/color'
 
 export const store = configureStore({
   reducer: {
-    [exampleSlice.name]: exampleSlice.reducer,
     [colorSlice.name]: colorSlice.reducer
   }
 })
 
 export const actions = {
-  [exampleSlice.name]: exampleSlice.actions,
   [colorSlice.name]: colorSlice.actions,
 }
 
