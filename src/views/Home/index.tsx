@@ -1,13 +1,12 @@
 import React from 'react'
-import { Box, Typography } from '@material-ui/core'
+
+import Appbar from 'views/Appbar'
 
 const Home: React.FC = () => {
   return (
-    <Box my={4}>
-      <Typography variant="h1" color="textPrimary" align="center">
-        Home
-      </Typography>
-    </Box>
+    <React.Fragment>
+      <Appbar />
+    </React.Fragment>
   )
 }
 
