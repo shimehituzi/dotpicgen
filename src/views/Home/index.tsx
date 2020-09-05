@@ -1,31 +1,13 @@
-import React, { useCallback, useEffect } from 'react'
-
-import { useAppSelector, useAppDispatch, actions } from 'state'
+import React from 'react'
+import { Box, Typography } from '@material-ui/core'
 
 const Home: React.FC = () => {
-  const example = useAppSelector(state => state.example)
-
-  const dispatch = useAppDispatch()
-  const changeForm = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      dispatch(actions.example.setExample({
-        text: e.target.value
-      }))
-    }, [dispatch]
-  )
-
-  useEffect(() => {
-    return () => { dispatch(actions.example.reset()) }
-  }, [dispatch])
-
   return (
-    <React.Fragment>
-      <input
-        type='text'
-        value={example.text}
-        onChange={changeForm}
-      />
-    </React.Fragment>
+    <Box my={4}>
+      <Typography variant="h1" color="textPrimary" align="center">
+        Home
+      </Typography>
+    </Box>
   )
 }
 
