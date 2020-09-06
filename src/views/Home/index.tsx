@@ -1,30 +1,26 @@
-import React, { useCallback, useEffect } from 'react'
+import React from 'react'
+import { Grid, Card, CardContent } from '@material-ui/core'
 
-import { useAppSelector, useAppDispatch, actions } from 'state'
+import Appbar from 'views/Appbar'
+import ColorPullet from 'views/ColorPullet'
+import Canvas from 'views/Canvas'
 
 const Home: React.FC = () => {
-  const example = useAppSelector(state => state.example)
-
-  const dispatch = useAppDispatch()
-  const changeForm = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      dispatch(actions.example.setExample({
-        text: e.target.value
-      }))
-    }, [dispatch]
-  )
-
-  useEffect(() => {
-    return () => { dispatch(actions.example.reset()) }
-  }, [dispatch])
-
   return (
     <React.Fragment>
-      <input
-        type='text'
-        value={example.text}
-        onChange={changeForm}
-      />
+      <Appbar/>
+      <Card>
+        <CardContent>
+          <Grid container justify="center">
+            <ColorPullet/>
+          </Grid>
+        </CardContent>
+        <CardContent>
+          <Grid container justify="center">
+            <Canvas/>
+          </Grid>
+        </CardContent>
+      </Card>
     </React.Fragment>
   )
 }
