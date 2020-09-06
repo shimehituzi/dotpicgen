@@ -18,7 +18,7 @@ const ColorPullet: React.FC = () => {
   return (
     <ToggleButtonGroup size="small" value={color.pulletColor} exclusive onChange={changeColor}>
       {
-        Object.entries(Colors).map(([_, color], index) => {
+        Object.values(Colors).map((color, index) => {
           return (
             <ToggleButton key={index} value={color}>
               <Brightness1 style={{color: color}}/>
