@@ -6,22 +6,11 @@ import { Colors } from 'state/color'
 type Dots = Array<Array<Colors>>
 
 type Canvas = {
-  row: number
-  col: number
   dots: Dots
 }
 
 const initialState: Canvas = {
-  row: 0,
-  col: 0,
-  dots: [
-    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
-    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
-    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
-    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
-    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
-    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
-  ]
+  dots: Array(9).fill(Array(9).fill(Colors.White))
 }
 
 const canvasSlice = createSlice({
