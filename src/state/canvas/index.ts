@@ -15,12 +15,12 @@ const initialState: Canvas = {
   row: 0,
   col: 0,
   dots: [
-    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
-    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
-    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
-    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
-    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
-    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
+    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
+    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
+    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
+    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
+    [Colors.Gray, Colors.Red, Colors.Blue, Colors.Green, Colors.Yellow, Colors.White],
   ]
 }
 

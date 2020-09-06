@@ -1,4 +1,5 @@
-import React, { useCallback } from 'react'
+import React, { useCallback, CSSProperties } from 'react'
+import { Card, CardContent, colors } from '@material-ui/core'
 
 import { useAppSelector, useAppDispatch, actions, AppState } from 'state'
 
@@ -16,10 +17,15 @@ const Canvas: React.FC = () => {
     }, [dispatch, color]
   )
 
+  const rowStyle: CSSProperties = {
+    clear: "both",
+    display: "table",
+  }
+
   const dotStyle = useCallback(
     (dot: Color): React.CSSProperties => ({
       border: "none",
-      float: "none",
+      float: "left",
       height: 25,
       width: 25,
       margin: -1,
@@ -27,19 +33,25 @@ const Canvas: React.FC = () => {
     }), []
   )
 
+  const cardStyle: CSSProperties = {
+    backgroundColor: colors.grey[300],
+    paddingBottom: 16
+  }
+
   return (
-    <React.Fragment>
-      { dots.map((row, y) => (
-        <div key={y}>
-          {
-            row.map((dot, x) => (
-              <div key={x} style={dotStyle(dot)} onClick={changeDotColor(y, x)}
-              />
-            ))
-          }
-        </div>
-      )) }
-    </React.Fragment>
+    <Card>
+      <CardContent style={cardStyle}>
+        { dots.map((row, y) => (
+          <div key={y} style={rowStyle}>
+            {
+              row.map((dot, x) => (
+                <div key={x} style={dotStyle(dot)} onClick={changeDotColor(y, x)} />
+              ))
+            }
+          </div>
+        )) }
+      </CardContent>
+    </Card>
   )
 }
 
