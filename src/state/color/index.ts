@@ -10,11 +10,11 @@ export enum Colors {
 }
 
 type Color = {
-  pulletColor: Colors | null
+  pulletColor: Colors
 }
 
 const initialState: Color = {
-  pulletColor: null
+  pulletColor: Colors.Gray
 }
 
 const colorSlice = createSlice({

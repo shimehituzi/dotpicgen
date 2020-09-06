@@ -1,0 +1,13 @@
+.canvas-row:after {
+  clear: both;
+  display: table;
+}
+
+.dot {
+  border: none;
+  float: left;
+  font-size: 15px;
+  height: 25px;
+  margin: -1px;
+  width: 25px;
+}

@@ -11,7 +11,7 @@ const ColorPullet: React.FC = () => {
   const dispatch = useAppDispatch()
   const changeColor = useCallback(
     (_:React.MouseEvent<HTMLElement, MouseEvent>, color: Colors) => {
-      dispatch(actions.color.setColor(color))
+      if (color !== null) dispatch(actions.color.setColor(color))
     }, [dispatch]
   )
 
