@@ -10,11 +10,11 @@ export enum Colors {
 }
 
 type Color = {
-  color: Colors
+  pulletColor: Colors
 }
 
 const initialState: Color = {
-  color: Colors.White
+  pulletColor: Colors.White
 }
 
 const colorSlice = createSlice({
@@ -23,7 +23,7 @@ const colorSlice = createSlice({
   reducers: {
     reset: () => initialState,
     setColor: (state, action: PayloadAction<Colors>) => {
-      state.color = action.payload
+      state.pulletColor = action.payload
     }
   }
 })
