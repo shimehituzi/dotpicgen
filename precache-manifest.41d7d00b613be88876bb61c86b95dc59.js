@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bae578dcde3e68a81b3f43c890196faf",
+    "revision": "cfdab2afde0e229e675852109ed8cc5b",
     "url": "/dotpicgen/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dotpicgen/static/js/2.229b3705.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "93ab2775df85ceea14f9",
-    "url": "/dotpicgen/static/js/main.1655230e.chunk.js"
+    "revision": "caa6cabf4af49d5f0381",
+    "url": "/dotpicgen/static/js/main.4bd2ebca.chunk.js"
   },
   {
     "revision": "9d5a104f9ddddf1e6c38",
