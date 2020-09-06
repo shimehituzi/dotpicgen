@@ -2,7 +2,7 @@
   "name": "rtk-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://shimehituzi.github.io/dotpicgen",
+  "homepage": "https://shimehituzi.github.io/dotpicgen/",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -30,7 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && gh-pages -d build"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
