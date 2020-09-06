@@ -1,7 +1,9 @@
 import React, { useCallback } from 'react'
 
-import { useAppSelector, useAppDispatch, actions } from 'state'
-import './dot.css'
+import { useAppSelector, useAppDispatch, actions, AppState } from 'state'
+
+
+type Color = AppState['color']['pulletColor']
 
 const Canvas: React.FC = () => {
   const dots = useAppSelector(state => state.canvas.dots)
@@ -14,17 +16,24 @@ const Canvas: React.FC = () => {
     }, [dispatch, color]
   )
 
+  const dotStyle = useCallback(
+    (dot: Color): React.CSSProperties => ({
+      border: "none",
+      float: "none",
+      height: 25,
+      width: 25,
+      margin: -1,
+      backgroundColor: dot
+    }), []
+  )
+
   return (
     <React.Fragment>
       { dots.map((row, y) => (
-        <div key={y} className='canvas-row'>
+        <div key={y}>
           {
             row.map((dot, x) => (
-              <div
-                key={x}
-                className='dot'
-                style={{backgroundColor: dot}}
-                onClick={changeDotColor(y, x)}
+              <div key={x} style={dotStyle(dot)} onClick={changeDotColor(y, x)}
               />
             ))
           }

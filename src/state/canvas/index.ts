@@ -12,12 +12,16 @@ type Canvas = {
 }
 
 const initialState: Canvas = {
-  row: 6,
-  col: 6,
-  dots: Array(3).fill(Array(3).fill(Colors.White))
-  // get dots() {
-  //   return Array(this.row).fill(Array(this.col).fill(Colors.White))
-  // }
+  row: 0,
+  col: 0,
+  dots: [
+    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+    [Colors.Red, Colors.Blue, Colors.Red, Colors.Gray],
+  ]
 }
 
 const canvasSlice = createSlice({
